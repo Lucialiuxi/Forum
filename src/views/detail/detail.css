@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.put_top{
+    background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    margin-left:10px;
+}
+.title{
+    margin-bottom: 20px;
+}
+.subtitle{
+    font-size: 12px;
+    color: #838383;
+    text-indent: 10px;
+}
+header{
+    margin-bottom: 20px;
+}
+.article{
+    border: 1px solid #ccc;
+    line-height: 30px;
+}
+.replies .author{
+    color: #fff;
+    background-color: #6ba44e;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.replies .replyHead{
+    padding: 10px;
+    background-color: #e1e1e1;
+    border-radius: 3px 3px 0 0;
+}
+.replies .replyContent{
+    background-color: #f4fcf0
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.replyContent img{
+    height: 30px;
+    width: 30px;
+    border:none;
+}
+.replyContent .replyItem{
+    margin: 10px 0px;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: content-box;
+    padding-bottom: 5px;
+    border-bottom: 5px;
+}
+.replyContent .replyItem .replyUserInfo{
+    margin-bottom: 10px;
+    height: 30px;
+}
+.replyUserInfo .like{
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.replyContent .replyItem span,.replyContent .replyItem img, .replyItem a{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: top;
+}
+.replyContent .replyItem a{
+    margin-left: 10px;
+    overflow: hidden;
+}
+.replyContent .replyItem a:hover{
+    color: red;
+    text-decoration:underline;
+}
+.replyContent .replyItem img{
+    margin-right: 10px;
+    border: none;
+}
+.replyContent .put_top{
+    background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    margin-right:10px;
+}
+.replyContent .replyText p{
+    font-size: 14px;
+    line-height: 20px;
+    text-indent: 0;
+}
+.replyContent  .replyText p a{
+    display: block;
+    padding: 0;
+    width: 100%;
+    float: left;
+    text-indent: 0;
+}
+.replyText img{
+    display: block;
+    float: none;
+}
+.replyUserInfo img,
+.replyUserInfo .userName,
+.replyUserInfo .floor,
+.replyUserInfo .itemDif
+.replyUserInfo .author{
+    float: left;
+    margin-right: 5px;
+}
+.myReply{
+    height: 200px;
+    background-color: red;
+    margin-bottom: 200px;
+}

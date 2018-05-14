@@ -1,0 +1,91 @@
+
+.mainInfor p{
+    height: 30px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+}
+.lastestTopicsItem,
+.recent_repliesItem{
+    margin-bottom: 5px;
+}
+.mainInfor span,
+.mainInfor img,
+.gitInfo i, 
+.gitInfo em,
+.lastestTopicsItem .userAvatar,
+.lastestTopicsItem span,
+.recent_repliesItem .userAvatar,
+.recent_repliesItem span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+}
+.lastestTopicsItem .replyUserAvatar,
+.lastestTopicsItem .replyDif,
+.recent_repliesItem .replyUserAvatar,
+.recent_repliesItem .replyDif{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+}
+.gitInfo .gitIcon{
+    width: 30px;
+    display: block;
+    background:red url(../../assets/img/git.png) no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+h2{
+    margin: 0;
+    height: 40px;
+    background-color:#ccc;
+    line-height: 40px
+}
+
+.recent_repliesItem,
+.lastestTopicsItem{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.lastestTopicsItem:hover,
+.recent_repliesItem:hover{
+ background-color: #f2e9e0;
+}
+.recent_repliesItem span,
+.lastestTopicsItem span{
+    margin:0 5px;
+}
+.recent_repliesItem .replyCount,
+.lastestTopicsItem .replyCount{
+    margin-right: 0px;
+}
+.lastestTopics .typeMark,
+.recent_replies .typeMark{
+    background: #80bd01;
+    padding: 2px 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+}
+.recent_repliesList,
+.lastestTopicsList{
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+}
+
+.userPage{
+    padding-bottom: 50px;
+}
+.replyDif{
+    margin-right: 5px;
+}

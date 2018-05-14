@@ -1,0 +1,22 @@
+export let menusData = [
+    {
+        title:'全部',
+        name:'all',
+    },
+    {
+        title:'精华',
+        name:'good',
+    },
+    {
+        title:'分享',
+        name:'share',
+    },
+    {
+        title:'问答',
+        name:'ask',
+    },
+    {
+        title:'招聘',
+        name:'job',
+    }
+]
