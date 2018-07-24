@@ -1,11 +1,11 @@
 <template>
-  <div>
-      <h2>
-          <a @click="goToHome">主页</a>/
-          <a @click="goToUserPage">{{userdis}}的主页</a>
+  <div id="userTopicDetail">
+      <h2 class="userTopicDetail_title">
+          <a @click="goToHome" class="goToHome">主页</a>/
+          <a @click="goToUserPage" class="goToUserPage">{{userdis}}的主页</a>
       </h2>
       <div>
-          <h2>{{userdis}}创建的话题</h2>
+          <h2 class="topicTitle">{{userdis}}创建的话题</h2>
           <ul class="lastestTopicsList">
                 <li 
                     class="lastestTopicsItem"
@@ -14,7 +14,6 @@
                 >
                         <img 
                             :src="item.author.avatar_url" 
-                            :alt="item.author.loginname" 
                             :title="item.author.loginname"
                             class="userAvatar"
                         >

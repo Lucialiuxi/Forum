@@ -44,7 +44,7 @@ export function getUserCollectTopics(params){
  */
 export function newADevTopic(params){
     return axios.post('/topics',{
-        accesstoken:'6ad1ca3d-981f-4e6b-9c10-aa5a9871cb5c',
+        accesstoken:'d859f520-43bb-452b-8036-53f380713636',
         title:params.title,
         tab:'dev',
         content:params.content
@@ -56,7 +56,7 @@ export function newADevTopic(params){
  */
 export function newAComment(params){
     return axios.post(`/topic/${params.topicId}/replies`,{
-        accesstoken:'6ad1ca3d-981f-4e6b-9c10-aa5a9871cb5c',
+        accesstoken:'d859f520-43bb-452b-8036-53f380713636',
         content :params.content,
         reply_id:'5433d5e4e737cbe96dcef312'
     })
@@ -64,11 +64,11 @@ export function newAComment(params){
 
 
 /**
- * 点赞 
+ * 点赞 params->{replyId:XXX} 点赞的那条回复的id
  */
 export function isLike(params){
-    return axios.post(`/topic/${params.topicId}/replies`,{
-        accesstoken:'6ad1ca3d-981f-4e6b-9c10-aa5a9871cb5c'
+    return axios.post(`/reply/${params.replyId}/ups`,{
+        accesstoken:'d859f520-43bb-452b-8036-53f380713636'
     })
 }
 
@@ -82,6 +82,7 @@ export default {
             getUserCollectTopics,
             newADevTopic,
             newAComment,
+            isLike,
         }
     }
 }

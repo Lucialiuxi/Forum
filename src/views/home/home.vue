@@ -53,6 +53,9 @@
         vertical-align: middle;
         font-size: 22px;
     }
+    .layout a{
+        color: gray;
+    }
 </style>
 <template>
     <div class="layout">
@@ -89,7 +92,7 @@
                            v-for="item in list"
                            :key="item.id"
                         >
-                            <img :src="item.author.avatar_url" :alt="item.loginname" :title="item.author.loginname">
+                            <img :src="item.author.avatar_url"  :title="item.author.loginname">
                             <span title="回复数">{{item.reply_count}}</span>
                             <span>/</span>
                             <span title="点击数">{{item.visit_count}}</span>
@@ -140,7 +143,6 @@
              可以调用 this.$router.push。
             */
             selectMenu(name){
-                console.log(name)
                  // 编程式的导航:带查询参数，变成 ?tab=name
                 this.$router.push({
                     path: '/', 
@@ -161,7 +163,6 @@
             ,
             //根据分类  页码  数据条数 去请求数据
              async fetchTopicData(params={page:1}){
-                 console.log('执行了')
                 //从路由对象里面拿tab的值，拿到是哪个分类的数据，没有的话就默认请求all
                 let tab = this.$route.query.tab || 'all';
                 let page = params.page || this.$route.query.page || 1;
@@ -180,7 +181,6 @@
                 this.list = data.data;
                 //数据回来之后取消加载显示
                 this.spinShow = false;
-                console.log(this.list)
             }
         },
         watch:{

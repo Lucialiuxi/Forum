@@ -3,11 +3,11 @@
       <div class="userPage">
         <div class="mainInfor">
                 <h2>
-                <a @click="goToHome">主页</a>/
+                <a @click="goToHome" class="toToHomePageA">主页</a>/
                 </h2>
-                <div>
+                <div class="userInfoDiv">
                     <p>
-                        <img :src="userInfo.avatar_url" alt="">
+                        <img :src="userInfo.avatar_url" alt="" class="userAvatar">
                         <span>{{userInfo.loginname}}</span>
                     </p>
                     <div>
@@ -28,7 +28,7 @@
                 </div>
         </div>
         <div class="lastestTopics">
-            <h2>最近创建的话题</h2>
+            <h2 >最近创建的话题</h2>
             <ul class="lastestTopicsList">
                 <li 
                     class="lastestTopicsItem"
@@ -37,7 +37,6 @@
                 >
                         <img 
                             :src="item.author.avatar_url" 
-                            :alt="item.author.loginname" 
                             :title="item.author.loginname"
                             class="userAvatar"
                         >
@@ -54,6 +53,7 @@
                 </li>
             </ul>
             <router-link 
+                class="viewMore"
                 :to="{ name: 'UserTopicsDetail',params:{u:'user',userLoginName:userInfo.loginname,p:'topics',user:userInfo.loginname}}"
             >查看更多»</router-link>
         </div>
@@ -67,7 +67,6 @@
                 >
                         <img
                             :src="item.author.avatar_url" 
-                            :alt="item.author.loginname" 
                             :title="item.author.loginname"
                             class="userAvatar"
                         >
@@ -83,12 +82,13 @@
                         <a class="replyDif">{{item.difT}}前</a>
                 </li>
             </ul>
-            <router-link :to="{ name: 'UserTopicsDetail',params:{u:'user',userLoginName:userInfo.loginname,p:'replies',user:userInfo.loginname}}">查看更多»</router-link>
+            <router-link 
+                class="viewMore"
+                :to="{ name: 'UserTopicsDetail',params:{u:'user',userLoginName:userInfo.loginname,p:'replies',user:userInfo.loginname}}"
+            >查看更多»</router-link>
         </div>
     </div>
-
   </div>
-  <!-- <router-view></router-view> -->
 </template>
 
 <script>
@@ -147,7 +147,6 @@
                     this.recentRepliesFiler = this.recentRepliesData.slice(0,5);
                },1000)
             });
-            console.log('created')
             this.getUserCollectTopicsData(loginname)
         },
         methods:{
